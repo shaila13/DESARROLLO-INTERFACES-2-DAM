@@ -1,0 +1,5 @@
+C:\Users\Shaila\Documents\DAM\2 DAM\DI\DI1819\DI1819\Ejercicio9DDr\Ejercicio9DDr\bin\Debug\Ejercicio9DDr.exe.config
+C:\Users\Shaila\Documents\DAM\2 DAM\DI\DI1819\DI1819\Ejercicio9DDr\Ejercicio9DDr\bin\Debug\Ejercicio9DDr.exe
+C:\Users\Shaila\Documents\DAM\2 DAM\DI\DI1819\DI1819\Ejercicio9DDr\Ejercicio9DDr\bin\Debug\Ejercicio9DDr.pdb
+C:\Users\Shaila\Documents\DAM\2 DAM\DI\DI1819\DI1819\Ejercicio9DDr\Ejercicio9DDr\obj\Debug\Ejercicio9DDr.exe
+C:\Users\Shaila\Documents\DAM\2 DAM\DI\DI1819\DI1819\Ejercicio9DDr\Ejercicio9DDr\obj\Debug\Ejercicio9DDr.pdb

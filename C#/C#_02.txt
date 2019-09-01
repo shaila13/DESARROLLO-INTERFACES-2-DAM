@@ -1,0 +1,89 @@
+---- MÉTODOS
+
+En C# no se distinguen métodos de funciones, ambos términos son lo mismo.
+
+En otros lenguajes una función se declara fuera de las clases y los métodos dentro.
+
+---- OPERADORES DE COMPARACIÓN
+Igual que en Java.
+
+---- CONDICIONALES
+
+****  IF
+condition ? consequence : alternative
+
+int input = new Random().Next(-5, 5);
+
+string classify;
+if (input >= 0)
+{
+    classify = "nonnegative";
+}
+else
+{
+    classify = "negative";
+}
+
+classify = (input >= 0) ? "nonnegative" : "negative";
+
+También es posible extender la instrucción if de modo que puedan controlarse varias condiciones, mediante la construcción else-if siguiente:
+
+            if (Condition_1)
+{
+    // Statement_1;
+}
+else if (Condition_2)
+{
+    // Statement_2;
+}
+else if (Condition_3)
+{
+    // Statement_3;
+}
+else
+{
+    // Statement_n;
+};
+
+**** Switch
+///OJO CON LAS LLAVES
+int caseSwitch = 1;
+switch (caseSwitch)
+{
+    case 1: 
+        Console.WriteLine("Case 1");
+        break;
+    case 2:
+        Console.WriteLine("Case 2");
+        break;
+    default:
+        Console.WriteLine("Default case");
+        break;
+};
+
+**** BUCLES ---> DETERMINADOS (FOR); E INDETERMINADOS (WHILE,DO-WHILE);
+
+**** FORI
+for (int i = 0; i < 5; i++)
+{
+    Console.WriteLine(i);
+};
+
+**** FOREACH
+var fibNumbers = new List<int> { 0, 1, 1, 2, 3, 5, 8, 13 };
+int count = 0;
+foreach (int element in fibNumbers)
+{
+    count++;
+    Console.WriteLine($"Element #{count}: {element}");
+}
+Console.WriteLine($"Number of elements: {count}");
+
+**** WHILE
+int n = 0;
+while (n < 5)
+{
+    Console.WriteLine(n);
+    n++;
+}; //Estos puntos y comas son para que no me salga en rojo, no es sintaxis de C#.
+

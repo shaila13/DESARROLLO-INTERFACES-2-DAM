@@ -1,0 +1,5 @@
+C:\Users\Shaila\Documents\DAM\2 DAM\DI\DI1819\DI1819\Ejercicio5DDR\Ejercicio5DDR\bin\Debug\Ejercicio5DDR.exe.config
+C:\Users\Shaila\Documents\DAM\2 DAM\DI\DI1819\DI1819\Ejercicio5DDR\Ejercicio5DDR\bin\Debug\Ejercicio5DDR.exe
+C:\Users\Shaila\Documents\DAM\2 DAM\DI\DI1819\DI1819\Ejercicio5DDR\Ejercicio5DDR\bin\Debug\Ejercicio5DDR.pdb
+C:\Users\Shaila\Documents\DAM\2 DAM\DI\DI1819\DI1819\Ejercicio5DDR\Ejercicio5DDR\obj\Debug\Ejercicio5DDR.exe
+C:\Users\Shaila\Documents\DAM\2 DAM\DI\DI1819\DI1819\Ejercicio5DDR\Ejercicio5DDR\obj\Debug\Ejercicio5DDR.pdb

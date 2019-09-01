@@ -1,0 +1,5 @@
+C:\Users\Shaila\Documents\DAM\2 DAM\DI\DI1819\DI1819\Ejercicio2\Ejercicio2\bin\Debug\Ejercicio2.exe.config
+C:\Users\Shaila\Documents\DAM\2 DAM\DI\DI1819\DI1819\Ejercicio2\Ejercicio2\bin\Debug\Ejercicio2.exe
+C:\Users\Shaila\Documents\DAM\2 DAM\DI\DI1819\DI1819\Ejercicio2\Ejercicio2\bin\Debug\Ejercicio2.pdb
+C:\Users\Shaila\Documents\DAM\2 DAM\DI\DI1819\DI1819\Ejercicio2\Ejercicio2\obj\Debug\Ejercicio2.exe
+C:\Users\Shaila\Documents\DAM\2 DAM\DI\DI1819\DI1819\Ejercicio2\Ejercicio2\obj\Debug\Ejercicio2.pdb

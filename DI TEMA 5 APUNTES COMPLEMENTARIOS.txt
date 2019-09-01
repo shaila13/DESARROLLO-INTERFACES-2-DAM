@@ -1,0 +1,29 @@
+DI TEMA 5 APUNTES COMPLEMENTARIOS
+
+1.Debemos indicar al IReport donde está nuestro proyecto Java para que pueda
+encontrar las clases necesarias. 
+	1.1.Compilamos el proyecto en el NetBeans (Mayus+F11), se generará un jar en
+	la carpeta dist con el nombre de nuestro proyecto.
+	1.2.Agregamos el jar generado en el directorio dist al IReports. Para hacerlo
+	pulsamos en Herramientas>Opciones, pinchamos en la pestaña Classpath y
+	pulsamos Add jar, seleccionando el jar que está en dist en la carpeta de
+	nuestro proyecto Java.
+	
+2.Configuramos el DataSource. En el Ireport pinchamos en el botón Report 
+DataSources (cuarto botón por la izquierda en la barra de herramientas 
+superior). En la pantalla emergente que obtenemos pulsamos “New”. 
+
+
+        private string nombrePersonaContacto;
+        public string NombrePersonaContacto
+        {
+            get
+            {
+                return nombrePersonaContacto;
+            }
+            set
+            {
+                this.nombrePersonaContacto = value;
+                this.PropertyChanged(this, new PropertyChangedEventArgs("NombrePersonaContacto"));
+            }
+        }

@@ -1,0 +1,6 @@
+C:\Users\Shaila\Documents\DAM\2 DAM\DI\DI1819\DI1819\Ejercicio1DDR\Ejercicio1DDR\bin\Debug\Ejercicio1DDR.exe.config
+C:\Users\Shaila\Documents\DAM\2 DAM\DI\DI1819\DI1819\Ejercicio1DDR\Ejercicio1DDR\bin\Debug\Ejercicio1DDR.exe
+C:\Users\Shaila\Documents\DAM\2 DAM\DI\DI1819\DI1819\Ejercicio1DDR\Ejercicio1DDR\bin\Debug\Ejercicio1DDR.pdb
+C:\Users\Shaila\Documents\DAM\2 DAM\DI\DI1819\DI1819\Ejercicio1DDR\Ejercicio1DDR\obj\Debug\Ejercicio1DDR.csprojResolveAssemblyReference.cache
+C:\Users\Shaila\Documents\DAM\2 DAM\DI\DI1819\DI1819\Ejercicio1DDR\Ejercicio1DDR\obj\Debug\Ejercicio1DDR.exe
+C:\Users\Shaila\Documents\DAM\2 DAM\DI\DI1819\DI1819\Ejercicio1DDR\Ejercicio1DDR\obj\Debug\Ejercicio1DDR.pdb

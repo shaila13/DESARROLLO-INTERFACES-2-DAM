@@ -1,0 +1,6 @@
+C:\Users\Shaila\Documents\DAM\2 DAM\DI\DI1819\DI1819\Ejercicio3\Ejercicio3\bin\Debug\Ejercicio3.exe.config
+C:\Users\Shaila\Documents\DAM\2 DAM\DI\DI1819\DI1819\Ejercicio3\Ejercicio3\bin\Debug\Ejercicio3.exe
+C:\Users\Shaila\Documents\DAM\2 DAM\DI\DI1819\DI1819\Ejercicio3\Ejercicio3\bin\Debug\Ejercicio3.pdb
+C:\Users\Shaila\Documents\DAM\2 DAM\DI\DI1819\DI1819\Ejercicio3\Ejercicio3\obj\Debug\Ejercicio3.csprojResolveAssemblyReference.cache
+C:\Users\Shaila\Documents\DAM\2 DAM\DI\DI1819\DI1819\Ejercicio3\Ejercicio3\obj\Debug\Ejercicio3.exe
+C:\Users\Shaila\Documents\DAM\2 DAM\DI\DI1819\DI1819\Ejercicio3\Ejercicio3\obj\Debug\Ejercicio3.pdb

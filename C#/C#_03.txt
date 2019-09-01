@@ -1,0 +1,73 @@
+---- EXCEPCIONES
+
+public class TienesMuchosGatosException : Exception
+{
+    public int NumeroGatos { get; private set; }
+
+    public TienesMuchosGatosException(int numeroGatos) 
+        : base("¡" + numeroGatos + " son muchos gatos!")
+    {
+        NumeroGatos = numeroGatos;
+    }
+}
+
+// En alguna otra parte del código:
+// ...
+        if (value > 1)
+            throw new TienesMuchosGatosException(value);
+        _numeroGatos = value;
+// ...
+
+
+---- Manejo selectivo de EXCEPCIONES.
+
+try
+{
+    // Intentamos algo peligroso:
+    adulto2.NumeroGatos = Int32.MaxValue;
+}
+catch (TienesMuchosGatosException te)
+{
+    // Manejamos la excepción relacionada con los gatos:
+    Console.WriteLine("Ooops, no puedes tener " + te.NumeroGatos + " gatos");
+}
+catch(NullReferenceException ne)
+{
+    // Manejamos el error relacionado con objetos nulos
+} 
+catch(ArithmeticException)
+{
+    // Manejamos cualquier error relacionad 
+    // con desborde de números o divisiones entre 0
+}
+catch
+{
+    // Manejamos cualquier otra excepcion
+}
+
+---- Relanzando EXCEPCIONES.
+
+Hay ocasiones en las que tal vez quieras manejar una excepcion capturada con el único fin de 
+realizar alguna tarea de registro, pero dejar que siga fallando como si no la hubieras atrapado. 
+Para esos casos, puedes usar la instrucción throw solamente:
+
+try
+{
+    throw new NotImplementedException();
+}
+catch(Exception e)
+{
+    // Logging
+    throw;
+}
+
+---- EXCEPCIONES CAPTURA CON FILTRO.
+
+catch (Exception ex) when (
+    ex is ...
+    || ex is ...
+    || ex is ...
+)
+
+catch (Exception ex) when (E.getType()!=typeof(FormatException)){}
+

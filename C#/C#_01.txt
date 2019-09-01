@@ -1,0 +1,111 @@
+FORMATEAR CÓDIGO --> CTRL + K, D
+
+----- C# no te deja usar variables que no se han inicializado.
+
+----- Mismos operadores aritméticos que en java --> + - * / % (módulo).
+
+----- Otra forma de concatenar strings --> Console.WriteLine($"Tienes una edad de {edad} años");
+
+----- Usar la palabra reservada var significa que estamos dejándole al compilador 
+la tarea de asignar un tipo a nuestras variables. Llamamos a esto tipado 
+implícito, así nos quitamos de encima la tarea de escribir los tipos completos. 
+
+var numeroElementos = 5;
+var otroNumero = 5L;
+var nombre = "Paquito";
+var x = nombre + numeroElementos;
+var y = numeroElementos + otroNumero;
+var sb =  new StringBuilder();
+var buenEstudiante =  new Persona("Estudiante");
+
+----- Conversiones de tipos (Guía de programación de C#);
+int i;  
+i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
+
+** String a Integer
+
+int entero = Int32.Parse(cadena);
+Int32.TryParse(cadena, out entero);
+
+Ejemplo:
+int cantidad = Int32.Parse("60");
+int importe;
+if(Int32.TryParse("60", out importe)){
+     Console.WriteLine(importe);
+}
+
+** Integer a String
+String cadena = entero.ToString();
+String cadena = string.Format("{0}", entero);
+Ejemplo:
+String cadena = 60.ToString();
+String cadena = string.Format("{0}", 60);
+
+** char a String
+String cadena = caracter.ToString();
+
+Ejemplo:
+String codigo = 'a'.ToString();
+char caracter = '0';
+String clave =  caracter.ToString();
+
+** String a char
+char caracter = cadena[0]; //Solo primer caracter
+Ejemplo:
+string queryString = "a=1?c=2"
+char evento = queryString[0];
+string mensaje = "404";
+char detalle = mensaje[2]; //para obtener 4
+
+** String a Double
+Double doble = Convert.ToDouble(cadena);  
+Double doble = double.Parse(cadena, cultura);
+Ejemplo:
+Double doble = Convert.ToDouble("50.5"); 
+Double doble = double.Parse("50.5", System.Globalization.CultureInfo.InvariantCulture);
+Nota: CultureInfo
+
+** Double a String
+String cadena = doble.ToString();
+String cadena = doble.ToString("0.000000"); //Usando mascara
+Ejemplo:
+String cadena = 55.5.ToString();
+String cadena = 55.5.ToString("0.000000"); //Usando mascara
+
+** String a Float
+float flotante = float.Parse(cadena, cultura);
+Ejemplo:
+float.Parse("90.852", System.Globalization.CultureInfo.InvariantCulture);
+Nota: CultureInfo
+
+** Float a String
+String cadena = flotante.toString()
+String cadena = flotante.toString("0.000");
+
+Ejemplo:
+String cadena = 55.5f.toString()
+float kilogramos = 90.5f;
+String kiloStr= kilogramos.toString("0.000");
+
+** String a bool
+bool boleano = Convert.ToBoolean("true");    
+bool boleano = cadena == "1";
+Ejemplo:
+bool boleano = Convert.ToBoolean("false");    
+bool boleano = resultado == "1"; 
+
+** bool a String
+String cadena = boleano.ToString();
+Ejemplo:
+String resultado = true.ToString();
+bool aplicar = true;
+String resultado = aplicar.ToString();
+
+** Arreglo de Bytes a String
+string result = System.Text.Encoding.UTF8.GetString(arregloBytes);
+Ejemplo:
+byte[] arreglo = new byte[] { 1,2,3};
+Console.WriteLine(System.Text.Encoding.UTF8.GetString(arreglo));
+
+----- Constantes --> Las constantes DEBEN declararse e iniciarse en la misma línea, con las variables puedes hacerlo en dos líneas.
+const int VALOR = 20; //Normalmente por convencion va en mayúsculas.

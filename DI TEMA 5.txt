@@ -1,0 +1,100 @@
+DI TEMA 5
+
+JDK 1.7 porque sino no va con el iReport y hay que decirle que tire sobre el 1.7 --> directorio etc --> iReport.co tocar la línea y poner contra el JDK 1.7
+
+La base de datos, en windows hay que ejecutarla como admon o cambiar los permisos.
+
+Ayuda --> rundatabase (Para arrancar la bbdd)
+
+Nuevo --> plantilla en blanco
+
+Column header --> nombre de las columnas.
+detail --> datos del corredor o corredores.
+Column footer --> mostrar subtotales --> número total de corredores (por ejemplo).
+Sumary --> resumen del informe --> campos calculados que afecten a todo el informe.
+
+Preview data --> vista previa de los "productos".
+
+VARIABLES
+
+$F --> Campo
+$V --> Variables
+$P --> Parámetros --> cosas que le pasamos al informe desde fuera.
+
+OJO !!!!
+Diferencia entre static text y textfield --> el primero no es java ni nada, no se pueden poner parámetros es un jlabel de swing, 
+textfield es como java, podemos poner parámetros y concatenar y lo EVALÚA.
+
+----- APRENDIENDO IREPORT
+
+****** EJERCICIO 1
+
+1º Arrancar el programa SIEMPRE COMO ADMON para windows
+2º En el desplegable colocar la bbdd con la que vamos a trabajar
+3º Ir a Ayuda --> Samples --> Run Samples DataBase
+4º Archivo --> new --> cogemos la plantilla vacía Blank A4 vertical --> ponemos el nombre en este caso factura --> 
+yo lo guardé en otra carpeta en DI, no en la que viene por defecto.
+5º Hacer una consulta --> botón al lado de Preview
+6º Hacer una consulta pasando un parámetro --> ir a menú lateral izda 
+--> Parameters --> botón derecho y agregar uno nuevo --> ponemos un nombre descripotivo del parámetro
+7º Escribimos la consulta --> SELECT * FROM POSITIONS WHERE DOCUMENTID = 
+Nos aparece a la derecha el parámetro que hemos creado, tan solo lo arrastramos a lo anterior -->
+
+
+SELECT D.ADDRESSID AS IDCLIENTE, D.ID,PR.NAME AS NOMBRE, P.QUANTITY AS CANTIDAD, P.PRICE AS PRECIO FROM POSITIONS P, 
+PRODUCT PR, DOCUMENT D WHERE D.ID = P.DOCUMENTID AND P.PRODUCTID = PR.ID AND D.ID = $P{idocumento}
+
+8º Pulsamos READ FIELDS --> sino nos da ningún error --> OK.
+9º En el menú de la izda en FIELDS ya nos aparecen los campos --> vamos arrastrando los que necesitemos.
+
+10º VARIABLES MANUALES --> creamos una nueva variable --> renombrar 
+En el mismo sitio donde renombramos hay que rellenar todos los campos:
+Ponemos el tipo de dato en VARIABLE CLASS, en el primer ejercicio podemos usar un number. Para crear una función propia --> 
+CALCULATION --> nothing. CREAMOS NUESTRA "ECUACIÓN" en Variable Expression --> pulsamos el botón con tres puntos --> nos sale
+una pantalla y ahí ponemos las variables con las que queremos operar --> $F{CANTIDAD}.multiply($F{PRECIO}) //${total_answer}.divide( ${total_max_score} )
+11º Para la variable total en este caso CALCULATION --> SUM. CREAMOS NUESTRA "ECUACIÓN" en Variable Expression --> ponemos la columna con la que queremos operar
+
+----- HACER UN SUBINFORME
+
+IREPORT nonos permite hacer dos consultas a la vez, para ello hay que hacer un informe.
+Hay un elemento subreport (lado derecho de la pantalla) lo arrastramos hasta nuestro informe.
+En la ventana que nos sale --> siguiente (en la primera) --> luego seleccionamos blank A4
+En la ventana query buscamos Empty datasource --> siguiente hasta ventana subreport exp --> le ponemos el nombre
+En la ventana Connection exp --> clickamos Use the same connection used... --> terminar
+
+OJO!! AL CREAR UN SUBINFORME NOS CAMBIA LA BBDD --> volver a poner la misma.
+
+REALIZAMOS LA CONSULTA
+
+COMUNICACIÓN ENTRE INFORME Y SUBINFORME --> VAMOS AL INFORME EN LAS PROPIEDADES (SELECCIONANDO EL SIMBOLIN DEL SUBINFORME)
+--> PARAMETERS --> ADD --> EN subreport parameter name --> PONEMOS EXACTAMENTE EL NOMBRE DEL PARAMETRO POR EL QUE SE HACER
+LA CONSULTA DEL SUBINFORME. Y en value expresion le pasamos el id del cliente.
+
+DEBEMOS CAMBIAR EL LENGUAJE DEL SUBINFORME --> DE GROOVY A JAVA --> menuda la que lié --> $F{PRECIO}.multiply(new BigDecimal($F{CANTIDAD})) 
+--> NO FUNCIONA POR ESTO --> hay que hacerlo desde la aplicación no vale con escribirlo (no se porqué)
+
+El ejercicio 2 no lo entiendo
+
+--> agrupación vamos al nombre del informe --> report --> botón derecho --> Add Report Group
+
+--> Le ponemos nombre al grupo y seleccionamos por el campo por el que queremos agrupar. CLIENTE --> idCliente 
+--> siguiente --> Dejamos los sticks -> Terminar
+
+Nos incluye CLIENTES GROUP HEAD Y FOOTER --> PODEMOS PONER UN CAMPO ESTÁTICO U OTRA COSA 
+--> ARRASTRAMOS EL CAMPO idcliente (POR EL QUE HEMOS AGRUPADO) --> Nos sale una ventana emergente para poder realizar varias cosas 
+--> escogemos la primera --> The fiel value
+--> podemos poner "ID cliente: "+$F{IDCLIENTE} --> no va a agrupar bien --> el problema es la consulta--> ordenar la consulta por el campo que agrupamos
+
+Ejercicio 3
+
+Aplicación en java que conecte con el informe del primer ejercicio --> vamos a usar el .jasper
+
+Crear una carpeta informes en nuestro proyecto de netbeans --> copier en ella los dos archivos generados en iReport.
+
+ <DataGrid x:Name="DataGridMaterialesParaAvituallamiento" ItemsSource="{Binding listaMateriales}" HorizontalAlignment="Left" Margin="21,41,0,0" VerticalAlignment="Top" Height="109" Width="375" SelectionChanged="DataGridMateriales"  />
+
+ DataGridMaterialesParaAvituallamiento.DataContext = gestionNegocio; 
+        
+<TextBox x:Name="BoxCantidadRetirar" HorizontalAlignment="Left" Height="23" Margin="87,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="42"/>
+        
+
